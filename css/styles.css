@@ -2,7 +2,7 @@
 body {
   background-color: green;
   color: black;
-  font-family: Verdana;
+  font-family: Fantasy;
 }
 
 h1 {
@@ -12,8 +12,13 @@ h1 {
   text-align: center;
 }
 
-h2, p {
+h2 {
   text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 17px;
 }
 
 img {
@@ -28,31 +33,30 @@ hr {
   background-color: green;
   border: 2px solid black;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* Link Button Styled */
-a:link {
+a.button:link {
   background-color: #02be02;
-  border: 3px solid black;
   color: #0000ff;
   margin: 3px;
   padding: 10px;
   display: inline-block;
+  font-size: 15px;
 }
-a:visited {
-  border: 3px solid black;
+a.button:visited {
   color: purple;
 }
-a:hover {
+a.button:hover {
   background-color: #06690e;
   color: #ffffff;
 }
-a:focus {
+a.button:focus {
   background-color: #06690e;
   color: #ffffff;
 }
-a:active {
+a.button:active {
   background-color: #034108;
   color: #debaff;
 }
@@ -66,4 +70,9 @@ a:active {
   padding: 30px;
   max-width: 800px;
   text-align: center;
+}
+
+/* Footer */
+p.copyright {
+  font-size: 12px;
 }
