@@ -1,24 +1,40 @@
 /* Main Styling */
+
 body {
   background-color: green;
   color: black;
   font-family: Arial;
 }
 
-h1 {
-  font-size: 40px;
-  margin-top: 0px;
-  margin-bottom: 20px;
+p {
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+p:has(.button) {
   text-align: center;
+}
+
+h1 {
+  font-size: 70px;
+  text-shadow: 2px 2px 10px black;
+  color: white;
+  background-image: url(../images/WebsiteBanner.png);
+  background-repeat: no-repeat;
+  background-size: 900px 191px;
+  padding: 55px;
+  margin: 0px;
 }
 
 h2 {
-  text-align: center;
+  margin: 15px;
 }
 
-p {
+li:not(.topnav li){
   text-align: center;
-  font-size: 17px;
+  list-style-position: inside;
+  padding: 10px;
 }
 
 img {
@@ -28,22 +44,73 @@ img {
   margin-bottom: 10px;
 }
 
-hr {
-  height: 5px;
-  background-color: green;
+textarea {
+  margin-bottom: 15px;
+}
+
+a.noBorder {
+  color: black;
+}
+
+/* Container */
+.container {
+  width: 50%;
+  background-color: lightgreen;
+  border: 3px solid black;
+  margin: auto;
+  padding: 0px;
+  max-width: 900px;
+  text-align: center;
+}
+
+/*Top Navigation Bar */
+.topnav {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.topnav ul {
+  list-style-type: none;
+  background-color: #02435f;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+.topnav a {
+  color: white;
+  background-color: #2487b1;
+  padding: 15px;
+  margin: 10px 4px 10px 4px;
+  display: inline-block;
   border: 2px solid black;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  transition: transform 0.3s, background-color 0.3s ease;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px black;
+}
+.topnav .active {
+  background-color: #05aff8;
+  transform: scale(1.1)
+}
+.topnav a:hover {
+  background-color: #05aff8;
+  transform: scale(1.1);
+}
+.topnav li {
+  display: inline-block;
 }
 
 /* Link Button Styled */
 a.button:link {
   background-color: #02be02;
   color: #0000ff;
-  margin: 3px;
+  margin: -5px;
   padding: 10px;
   display: inline-block;
   font-size: 15px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s ease;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px black;
 }
 a.button:visited {
   color: purple;
@@ -51,6 +118,7 @@ a.button:visited {
 a.button:hover {
   background-color: #06690e;
   color: #ffffff;
+  transform: scale(1.1);
 }
 a.button:focus {
   background-color: #06690e;
@@ -61,18 +129,23 @@ a.button:active {
   color: #debaff;
 }
 
-/* Main Content (Box) */
-.mainbox {
-  width: 50%;
-  background-color: lightgreen;
-  border: 3px solid black;
-  margin: auto;
-  padding: 30px;
-  max-width: 800px;
-  text-align: center;
+/* Baldi Page */
+.baldi {
+  background-image: url(../images/BaldiNoNose.jpg);
+  margin-top: 8px;
+}
+
+/* Horizontal Break */
+hr {
+  border: 1px solid black;
+  width: 96%;
+  color: black;
 }
 
 /* Footer */
-p.copyright {
+p.footer {
   font-size: 12px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 3px;
 }
