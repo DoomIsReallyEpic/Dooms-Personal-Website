@@ -5,7 +5,7 @@ I even made 2 wiki sites (Both on Google Sites) and a StrawPage before this whol
 I'm basically just pretty much expanding my own StrawPage to this website now, as there's much more stuff to do when making your own website.
 I'm currently using freeCodeCamp as a way to learn, and after I'm done with that I'll probably try to look for something else that can help better my skills in Web Development.
 
-Link to website: https://doomernuts.neocities.org/
+Link to website: https://doomernuts.nekoweb.org/
 
 ## How It's Made
 Currently, this website is made of HTML and CSS.
