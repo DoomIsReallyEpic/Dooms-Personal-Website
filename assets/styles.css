@@ -7,8 +7,7 @@ body {
 }
 
 p {
-  margin: 10px;
-  padding: 10px;
+  margin: 20px;
   text-align: left;
 }
 
@@ -20,7 +19,7 @@ h1 {
   font-size: 70px;
   text-shadow: 2px 2px 10px black;
   color: white;
-  background-image: url(../images/WebsiteBanner.png);
+  background-image: url(../assets/images/WebsiteBanner.png);
   background-repeat: no-repeat;
   background-size: 900px 191px;
   padding: 55px;
@@ -58,7 +57,7 @@ a.noBorder {
   background-color: lightgreen;
   border: 3px solid black;
   margin: auto;
-  padding: 0px;
+  padding: 0;
   max-width: 900px;
   text-align: center;
 }
@@ -131,21 +130,21 @@ a.button:active {
 
 /* Baldi Page */
 .baldi {
-  background-image: url(../images/BaldiNoNose.jpg);
+  background-image: url(../assets/images/BaldiNoNose.jpg);
   margin-top: 8px;
 }
 
 /* Horizontal Break */
 hr {
-  border: 1px solid black;
-  width: 96%;
+  height: 3px;
   color: black;
+  background-color: black;
+  border: none;
 }
 
 /* Footer */
 p.footer {
   font-size: 12px;
   text-align: center;
-  margin-top: 0px;
-  margin-bottom: 3px;
+  margin: 20px;
 }
