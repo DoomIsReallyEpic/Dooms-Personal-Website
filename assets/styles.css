@@ -1,150 +1,230 @@
-/* Main Styling */
+/*-- CSS Reset --*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*-- Elements --*/
+html {
+  overflow: -moz-scrollbars-horizontal; 
+  overflow-x: scroll;
+}
 
 body {
-  background-color: green;
+  background-image: url(../assets/images/Background.png);
   color: black;
   font-family: Arial;
 }
 
-p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+figcaption,
+textarea {
   margin: 20px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+ul:not(.topnav ul) {
+  display: inline-block;
+
   text-align: left;
 }
 
-p:has(.button) {
-  text-align: center;
-}
+li:not(.topnav li) {
+  margin: 0px 20px 0px 20px;
 
-h1 {
-  font-size: 70px;
-  text-shadow: 2px 2px 10px black;
-  color: white;
-  background-image: url(../assets/images/WebsiteBanner.png);
-  background-repeat: no-repeat;
-  background-size: 900px 191px;
-  padding: 55px;
-  margin: 0px;
+  line-height: 30px;
 }
-
-h2 {
-  margin: 15px;
-}
-
-li:not(.topnav li){
-  text-align: center;
-  list-style-position: inside;
-  padding: 10px;
+li:last-child:not(.topnav li) {
+  margin-bottom: 20px;
 }
 
 img {
   max-width: 100%;
-  height: auto;
-  border: solid;
-  margin-bottom: 10px;
+  max-height: 100%;
+  height: 100%;
+
+  border: solid black;
 }
 
-textarea {
-  margin-bottom: 15px;
-}
-
-a.noBorder {
-  color: black;
-}
-
-/* Container */
-.container {
-  width: 50%;
-  background-color: lightgreen;
-  border: 3px solid black;
-  margin: auto;
-  padding: 0;
-  max-width: 900px;
-  text-align: center;
-}
-
-/*Top Navigation Bar */
-.topnav {
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
-}
-
-.topnav ul {
-  list-style-type: none;
-  background-color: #02435f;
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-}
-.topnav a {
-  color: white;
-  background-color: #2487b1;
-  padding: 15px;
-  margin: 10px 4px 10px 4px;
-  display: inline-block;
-  border: 2px solid black;
-  transition: transform 0.3s, background-color 0.3s ease;
-  text-decoration: none;
-  box-shadow: 2px 2px 5px black;
-}
-.topnav .active {
-  background-color: #05aff8;
-  transform: scale(1.1)
-}
-.topnav a:hover {
-  background-color: #05aff8;
-  transform: scale(1.1);
-}
-.topnav li {
-  display: inline-block;
-}
-
-/* Link Button Styled */
-a.button:link {
-  background-color: #02be02;
-  color: #0000ff;
-  margin: -5px;
-  padding: 10px;
-  display: inline-block;
-  font-size: 15px;
-  text-align: center;
-  transition: transform 0.3s, background-color 0.3s ease;
-  text-decoration: none;
-  box-shadow: 2px 2px 5px black;
-}
-a.button:visited {
-  color: purple;
-}
-a.button:hover {
-  background-color: #06690e;
-  color: #ffffff;
-  transform: scale(1.1);
-}
-a.button:focus {
-  background-color: #06690e;
-  color: #ffffff;
-}
-a.button:active {
-  background-color: #034108;
-  color: #debaff;
-}
-
-/* Baldi Page */
-.baldi {
-  background-image: url(../assets/images/BaldiNoNose.jpg);
-  margin-top: 8px;
-}
-
-/* Horizontal Break */
 hr {
+  margin: auto;
   height: 3px;
-  color: black;
+
   background-color: black;
   border: none;
 }
 
-/* Footer */
-p.footer {
-  font-size: 12px;
+/*-- Classes --*/
+/*- Title -*/
+.title {
+  margin: auto;
+  padding: 8%;
+
+  max-height: 90%;
+  max-width: 90%;
+
+  background-image: url(../assets/images/WebsiteBanner.png);
+  background-size: 100% 100%;
+
+  font-size: 4.1rem;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+/*- Navigation Bar -*/
+.topnav {
+  list-style-type: none;
+  overflow: hidden;
+
+  background-color: #044a6b;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+.topnav li {
+  margin: 6px;
+
+  display: inline-block;
+
+  background-color: #43a2bd;
+}
+.topnav a {
+  padding: 15px;
+
+  display: inline-block;
+  text-decoration: none;
+
+  color: rgb(0, 0, 0);
+  border: 2px solid black;
+
+  transition:
+    background-color 0.3s,
+    color 0.3s ease;
+}
+.topnav a:hover {
+  background-color: #57d8fa;
+  color: rgb(0, 0, 0);
+}
+.topnav a:active {
+  transform: scale(1.1);
+}
+.topnav .active {
+  background-color: #57d8fa;
+  color: black;
+  transform: scale(1.1);
+}
+
+/*- Container -*/
+.container {
+  margin: auto;
+
+  max-width: 850px;
+
+  list-style-position: inside;
   text-align: center;
+
+  background-color: #5ab15a;
+  border: 3px solid black;
+}
+.container p:not(.footer p, .centertext) {
+  text-align: left;
+}
+
+/*- Center Text Subtitle -*/
+.centertext {
+  text-align: center;
+}
+
+/*- Web Button -*/
+.webbutton {
+  border: none;
+  margin-bottom: 20px;
+}
+
+/*- Guestbook -*/
+.guestbook {
   margin: 20px;
+}
+.guestbook iframe {
+  width: 100%;
+  height: 500px;
+
+  border: none;
+}
+
+/*- Links Page -*/
+.linkbuttons a {
+  padding: 10px;
+
+  display: inline-block;
+  text-decoration: none;
+
+  background-color: #8fda05;
+  color: rgb(0, 0, 0);
+  border: 2px solid black;
+
+  transition:
+    background-color 0.3s,
+    color 0.3s ease;
+}
+.linkbuttons a {
+  padding: 10px;
+
+  display: inline-block;
+  text-decoration: none;
+
+  background-color: #8fda05;
+  color: rgb(0, 0, 0);
+  border: 2px solid black;
+  transform: scale(1);
+  transition: ease-in-out 0.3s;
+}
+.linkbuttons a:hover {
+  background-color: #a7ff02;
+  color: rgb(0, 0, 0);
+  transform: scale(1.15);
+  transition: ease-in-out 0.3s;
+}
+
+/*- Baldi -*/
+.baldi {
+  background-image: url(../assets/images/BaldiNoNose.jpg);
+}
+
+/*- Strawpage Archive -*/
+.strawpage {
+  margin: 20px;
+
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+
+  border: solid 3px black
+}
+.strawpage img {
+  margin: 15px;
+}
+
+/*- Footer -*/
+.footer {
+  padding: 1px;
+
+  border-top: 3px solid black;
+  background-color: #044a6b;
+}
+.footer p {
+  line-height: 7px;
+  font-size: 0.75rem;
+
+  color: white;
 }
