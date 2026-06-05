@@ -16,4 +16,4 @@ jobs:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-domain: 'doomernuts.nekoweb.org'
           nekoweb-username: 'doomernuts'
-          directory: ''
+          directory: 'doomernuts.nekoweb.org'
