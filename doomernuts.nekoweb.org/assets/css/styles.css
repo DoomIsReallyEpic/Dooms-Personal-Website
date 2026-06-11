@@ -6,12 +6,11 @@
 
 /*-- Elements --*/
 html {
-  overflow: -moz-scrollbars-horizontal; 
   overflow-x: scroll;
 }
 
 body {
-  background-image: url(../assets/images/Background.png);
+  background: radial-gradient(circle,rgba(55, 184, 35, 1) 0%, rgba(0, 115, 0, 1) 50%, rgba(0, 105, 0, 1) 100%);
   color: black;
   font-family: Arial;
 }
@@ -24,14 +23,14 @@ h5,
 h6,
 p,
 figure,
-figcaption,
-textarea {
+figcaption {
   margin: 20px;
 }
 
-p {
+p:not(.footer p, .centertext) {
   font-size: 1rem;
   line-height: 1.5em;
+  text-align: left;
 }
 
 ul:not(.topnav ul) {
@@ -41,12 +40,9 @@ ul:not(.topnav ul) {
 }
 
 li:not(.topnav li) {
-  margin: 0px 20px 0px 20px;
+  margin: 0 20px 0 20px;
 
   line-height: 30px;
-}
-li:last-child:not(.topnav li) {
-  margin-bottom: 20px;
 }
 
 img {
@@ -55,6 +51,10 @@ img {
   height: 100%;
 
   border: solid black;
+}
+
+textarea {
+  padding: 10px;
 }
 
 hr {
@@ -74,7 +74,7 @@ hr {
   max-height: 90%;
   max-width: 90%;
 
-  background-image: url(../assets/images/WebsiteBanner.png);
+  background-image: url(../images/WebsiteBanner.png);
   background-size: 100% 100%;
 
   font-size: 4.1rem;
@@ -107,13 +107,14 @@ hr {
   color: rgb(0, 0, 0);
   border: 2px solid black;
 
-  transition:
-    background-color 0.3s,
-    color 0.3s ease;
+  transform: scale(1);
+  transition: ease-in-out 0.3s;
 }
 .topnav a:hover {
   background-color: #57d8fa;
   color: rgb(0, 0, 0);
+  transform: scale(1.15);
+  transition: ease-in-out 0.3s;
 }
 .topnav a:active {
   transform: scale(1.1);
@@ -136,22 +137,20 @@ hr {
   background-color: #5ab15a;
   border: 3px solid black;
 }
-.container p:not(.footer p, .centertext) {
-  text-align: left;
-}
 
 /*- Center Text Subtitle -*/
 .centertext {
   text-align: center;
 }
 
-/*- Web Button -*/
-.webbutton {
-  border: none;
+/*- Web Button & List Spacing -*/
+.webbutton, .listspacing li:last-child:not(.topnav li) {
   margin-bottom: 20px;
+  
+  border: none;
 }
 
-/*- Guestbook -*/
+/*- Guestbook Page -*/
 .guestbook {
   margin: 20px;
 }
@@ -159,24 +158,19 @@ hr {
   width: 100%;
   height: 500px;
 
-  border: none;
+  border: 3px solid black;
+}
+
+/*- External Link -*/
+.externallink::after {
+  margin-left: 3px;
+
+  vertical-align: middle;
+
+  content: url(../images/linkicons/ExternalIcon.png);
 }
 
 /*- Links Page -*/
-.linkbuttons a {
-  padding: 10px;
-
-  display: inline-block;
-  text-decoration: none;
-
-  background-color: #8fda05;
-  color: rgb(0, 0, 0);
-  border: 2px solid black;
-
-  transition:
-    background-color 0.3s,
-    color 0.3s ease;
-}
 .linkbuttons a {
   padding: 10px;
 
@@ -192,16 +186,16 @@ hr {
 .linkbuttons a:hover {
   background-color: #a7ff02;
   color: rgb(0, 0, 0);
-  transform: scale(1.15);
+  transform: scale(1.1);
   transition: ease-in-out 0.3s;
 }
 
 /*- Baldi -*/
 .baldi {
-  background-image: url(../assets/images/BaldiNoNose.jpg);
+  background-image: url(../images/BaldiNoNose.jpg);
 }
 
-/*- Strawpage Archive -*/
+/*- Strawpage Archive Page -*/
 .strawpage {
   margin: 20px;
 
@@ -209,7 +203,7 @@ hr {
   overflow-x: scroll;
   align-items: center;
 
-  border: solid 3px black
+  border: solid 3px black;
 }
 .strawpage img {
   margin: 15px;
