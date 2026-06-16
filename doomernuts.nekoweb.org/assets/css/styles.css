@@ -138,9 +138,12 @@ hr {
   border: 3px solid black;
 }
 
-/*- Center Text Subtitle -*/
+/*- Center Text & No Border -*/
 .centertext {
   text-align: center;
+}
+.noborder {
+  border: none;
 }
 
 /*- Web Button & List Spacing -*/
@@ -148,6 +151,32 @@ hr {
   margin-bottom: 20px;
   
   border: none;
+}
+
+/*- Shoutout Page -*/
+.shoutoutbuttons {
+  display: flexbox;
+  flex-wrap: wrap;
+}
+.shoutoutbuttons div {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.shoutoutbuttons img {
+  width: 100px;
+  height: 100px;
+
+  transform: scale(1);
+  transition: ease-in-out 0.3s;
+}
+.shoutoutbuttons img:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.3s;
+}
+.shoutoutbuttons figcaption {
+  font-size: 1.2rem;
 }
 
 /*- Guestbook Page -*/
@@ -159,15 +188,6 @@ hr {
   height: 500px;
 
   border: 3px solid black;
-}
-
-/*- External Link -*/
-.externallink::after {
-  margin-left: 3px;
-
-  vertical-align: middle;
-
-  content: url(../images/linkicons/ExternalIcon.png);
 }
 
 /*- Links Page -*/
@@ -195,8 +215,8 @@ hr {
   background-image: url(../images/BaldiNoNose.jpg);
 }
 
-/*- Strawpage Archive Page -*/
-.strawpage {
+/*- Strawpage & Shitpost Page -*/
+.overflowxscroll {
   margin: 20px;
 
   display: flex;
@@ -205,7 +225,7 @@ hr {
 
   border: solid 3px black;
 }
-.strawpage img {
+.overflowxscroll img {
   margin: 15px;
 }
 
