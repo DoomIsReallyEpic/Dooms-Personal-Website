@@ -10,7 +10,12 @@ html {
 }
 
 body {
-  background: radial-gradient(circle,rgba(55, 184, 35, 1) 0%, rgba(0, 115, 0, 1) 50%, rgba(0, 105, 0, 1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(55, 184, 35, 1) 0%,
+    rgba(0, 115, 0, 1) 50%,
+    rgba(0, 105, 0, 1) 100%
+  );
   color: black;
   font-family: Arial;
 }
@@ -107,7 +112,6 @@ hr {
   color: rgb(0, 0, 0);
   border: 2px solid black;
 
-  transform: scale(1);
   transition: ease-in-out 0.3s;
 }
 .topnav a:hover {
@@ -147,26 +151,29 @@ hr {
 }
 
 /*- Web Button & List Spacing -*/
-.webbutton, .listspacing li:last-child:not(.topnav li) {
+.webbutton,
+.listspacing li:last-child:not(.topnav li) {
   margin-bottom: 20px;
-  
+
   border: none;
 }
 
 /*- Shoutout Page -*/
-.shoutoutbuttons {
-  display: flexbox;
-  flex-wrap: wrap;
-}
 .shoutoutbuttons div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+
+  margin: 0 20px 0 20px;
+
+  gap: 20px;
+}
+.shoutoutbuttons figure {
+  margin: 0px;
 }
 .shoutoutbuttons img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 
   transform: scale(1);
   transition: ease-in-out 0.3s;
@@ -176,7 +183,9 @@ hr {
   transition: ease-in-out 0.3s;
 }
 .shoutoutbuttons figcaption {
-  font-size: 1.2rem;
+  margin: 10px 0 0 0;
+
+  font-size: 1.1rem;
 }
 
 /*- Guestbook Page -*/
@@ -208,6 +217,29 @@ hr {
   color: rgb(0, 0, 0);
   transform: scale(1.1);
   transition: ease-in-out 0.3s;
+}
+.youtubeicon::before,
+.discordicon::before,
+.githubicon::before,
+.itchioicon::before,
+.norwikiicon::before {
+  display: inline-block;
+  margin-right: 5px;
+}
+.youtubeicon::before {
+  content: url(../images/linkicons/YoutubeIcon.jpg);
+}
+.discordicon::before {
+  content: url(../images/linkicons/DiscordIcon.jpg);
+}
+.githubicon::before {
+  content: url(../images/linkicons/GitHubIcon.jpg);
+}
+.itchioicon::before {
+  content: url(../images/linkicons/ItchIOIcon.jpg);
+}
+.norwikiicon::before {
+  content: url(../images/linkicons/NorWiki.jpg);
 }
 
 /*- Baldi -*/

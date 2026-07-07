@@ -1,7 +1,7 @@
 # Doom's Personal Website
 
 This is my personal website's source code. I made all of it on VSCode and deployed it to https://nekoweb.com using Deploy 2 Nekoweb (https://github.com/indiefellas/deploy2nekoweb).
-I used HTMl and CSS to make this. Planning to incorporate Javascript soon.
+I used HTML and CSS to make this. Planning to incorporate Javascript soon.
 
 Link to website: https://doomernuts.nekoweb.org/
 
